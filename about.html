@@ -11,11 +11,12 @@
     <style>
         /* Apply styles to the body */
         body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            margin: 0;
-            padding: 0;
-        }
+    background-color: silver;
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Fixed background position */
+    /* ... other styles ... */
+}
 
         /* Style the title */
         h1 {
@@ -32,12 +33,12 @@
         p {
             font-size: 18px;
             line-height: 1.6;
-            color: #555; /* Change to your desired text color */
+            color: silver; /* Change to your desired text color */
             text-align: left;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: black; /* Change to your desired background color */
+            background-color: transparent; /* Change to your desired background color */
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
         }
@@ -162,6 +163,138 @@
             }
         </style>
 
+
+
+<style>
+    /* Add this CSS for horizontally scrollable content */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: grey;
+    }
+    .main-scroll-div{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.411), rgb(0, 0, 0)), url(assets/boja.jpg); /* Set the background color to black */
+        background-position: center;
+    background-size: cover;
+    position: relative;
+    }
+    .scrollable-container {
+        overflow-x: scroll;
+        white-space: nowrap;
+        padding: 20px; /* Add padding for better visual appearance */
+    }
+    .scrollable-container::-webkit-scrollbar {
+    display: none;
+}
+    .contain {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .pro p {
+        color: white;
+        font-size: 50px;
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+        margin-top: 3rem;
+        font-weight: bold;
+        
+    }
+
+    .card {
+        flex: 1;
+        background-color:rgba(221, 217, 217, 0.555);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(53, 53, 53, 0.2);
+        margin: 10px;
+        overflow: hidden;
+        width: 310px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        position: relative;
+        display: inline-block; /* Display cards in a row */
+        white-space: normal; /* Allow text within cards to wrap */
+        vertical-align: top; /* Align cards at the top */
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card img {
+        max-width: 100%;
+        height: 210px;
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    .card:hover img {
+        filter: grayscale(0%);
+    }
+
+    .card-content {
+        padding: 20px;
+        color: silver;
+    }
+
+    .card-content p {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    /* Title styles */
+    .card h2 {
+        font-size: 24px;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Background color for title */
+        color: white; /* Text color for title */
+        padding: 10px; /* Spacing for title */
+        position: absolute; /* Position the title */
+        top: 0; /* Place title at the top of the card */
+        left: 0; /* Place title at the left of the card */
+        width: 100%; /* Make title full width of the card */
+    }
+
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 768px) {
+        .contain {
+            flex-direction: column; /* Stack cards and title vertically on small screens */
+        }
+
+        .pro {
+            flex-basis: 100%; /* Make the "Projects" title take full width */
+        }
+
+        .card {
+            flex-basis: auto; /* Reset the card flex basis */
+            margin: 10px;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        .contain {
+            flex-direction: row; /* Display cards and title horizontally on larger screens */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .pro {
+            flex-basis: auto; /* Reset the "Projects" title flex basis */
+            margin-right: 20px; /* Add some spacing between the title and cards */
+        }
+
+        .card {
+            flex-basis: calc(25% - 20px); /* Four cards in a row with gap between them */
+            margin: 10px;
+        }
+    }
+</style>
+
+
+
 </head>
 <body>
     <header>
@@ -189,164 +322,54 @@
     <div id="contact">
         <div class="pa">
             <div class="pro">
-                <p>Our Team</p>
+                <p>About</p>
             </div>
-        <div class="contain scrollable-container">
-            <div class="card">
-                <h2>Card 1</h2> <!-- Title on top of the image -->
-                <img src="assets/zelalm.jpg" alt="Image 1">
-                <div class="card-content">
-                    <p>Chief Executive Officer-Zelalem Gizachew</p>
-                </div>
-            </div>
-            <div class="card">
-                <h2>Card 2</h2> <!-- Title on top of the image -->
-                <img src="assets/kizu.jpg" alt="Image 2">
-                <div class="card-content">
-                    <p>Entertainment and event deputy chief executive officer-Meron Tesfaye </p>
-                </div>
-            </div>
-            <div class="card">
-                <h2>Card 3</h2> <!-- Title on top of the image -->
-                <img src="assets/dj.jpg" alt="Image 3">
-                <div class="card-content">
-                    <p>Administrative and Finance Deputy executive officer- Dereje Werkie</p>
-                </div>
-            </div>
-            <div class="card">
-                <h2>Card 4</h2> <!-- Title on top of the image -->
-                <img src="assets/es.jpg" alt="Image 4">
-                <div class="card-content">
-                    <p>.Health and research deputy chief executive office - Dr Etsehiwot Haileselassie</p>
+            <!-- Add the scrollable container here -->
+            <div class="scrollable-container">
+                <div class="contain">
+                    <!-- Your card elements here -->
+                    <!-- Example card -->
+                    <div class="card">
+                        <h2>Card 1</h2>
+                        <img src="assets/zelalm.jpg" alt="Image 1">
+                        <div class="card-content">
+                            <p>Chief Executive Officer  - Zelalem Gizachew</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Card 1</h2>
+                        <img src="assets/kizu.jpg" alt="Image 1">
+                        <div class="card-content">
+                            <p>Entertainment and event deputy chief executive officer - Meron Tesfaye </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Card 1</h2>
+                        <img src="assets/dj.jpg" alt="Image 1">
+                        <div class="card-content">
+                            <p>Administrative and Finance Deputy executive officer- Dereje Werkie</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Card 1</h2>
+                        <img src="assets/es.jpg" alt="Image 1">
+                        <div class="card-content">
+                            <p>Health and research deputy chief executive office - Dr Etsehiwot Haileselassie</p>
+                        </div>
+                    </div>
+                    <!-- Repeat the card elements as needed -->
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    
-</div>
-</div>
-<script src="script.js"></script>
-     <style>
-        body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-   
-}
 
-.contain {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    flex-direction: column;
-    margin-top: 30px; /* Stack elements vertically */
-}
-
-.pro p{
-    color: white;
-    font-size: 50px;
-    width: 100%;
-    margin: 30px auto;
-    text-align: center;
-    margin-top: 3rem;
-    font-weight: bold;
-}
-
-.card {
-    flex: 1;
-    background-color:white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    overflow: hidden;
-    width: 200px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    position: relative;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
-    max-width: 100%;
-    height: 200px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-.card:hover img {
-    filter: grayscale(0%);
-}
-
-.card-content {
-    padding: 20px;
-    color: black;
-}
-
-.card-content p {
-    font-size: 16px;
-    margin: 0;
-}
-
-/* Title styles */
-.card h2 {
-    font-size: 24px;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Background color for title */
-    color: white; /* Text color for title */
-    padding: 10px; /* Spacing for title */
-    position: absolute; /* Position the title */
-    top: 0; /* Place title at the top of the card */
-    left: 0; /* Place title at the left of the card */
-    width: 100%; /* Make title full width of the card */
-}
-
-
-/* Media queries for responsiveness */
-/* Media queries for responsiveness */
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-    .contain {
-        flex-direction: column; /* Stack cards and title vertically on small screens */
-    }
-
-    .pro {
-        flex-basis: 100%; /* Make the "Projects" title take full width */
-    }
-
-    .card {
-        flex-basis: auto; /* Reset the card flex basis */
-        margin: 10px;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .contain {
-        flex-direction: row; /* Display cards and title horizontally on larger screens */
-        align-items: flex-start; /* Align items to the top */
-    }
-
-    .pro {
-        flex-basis: auto; /* Reset the "Projects" title flex basis */
-        margin-right: 20px; /* Add some spacing between the title and cards */
-    }
-
-    .card {
-        flex-basis: calc(25% - 20px); /* Four cards in a row with gap between them */
-        margin: 10px;
-    }
-}
+    <!-- Rest of your HTML content -->
 
 
 
-     </style>
+
+
+
 
 <footer>
     <p>ET-Health Alley</p>
@@ -360,7 +383,7 @@
         <a href="#"><i class="fab fa-linkedin"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
-    <p>&copy; 2023 ET-Health Alley. Designed by Hilina</p>
+    <p>&copy; 2023 ET-Health Alley. Designed by hilina with love</p>
 </footer>
 <script>
     // JavaScript to toggle the navigation menu on and off

@@ -2,10 +2,11 @@
 
 /* Apply styles to the <h1> element */
 body {
-    font-family: Arial, sans-serif;
-    background-color: black; /* Set the background color to black */
-    margin: 0;
-    padding: 0;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.753), rgba(0, 0, 0, 0.945)), url(assets/boja.jpg);
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Fixed background position */
+    /* ... other styles ... */
 }
 h1 {
     color: #333; /* Text color */
@@ -29,20 +30,7 @@ p {
 }
 /* Add CSS to style the scrollable container */
 /* Add CSS to style the scrollable container */
-.scrollable-container {
-    max-height: 100%; /* Set a maximum height to fit the available content without overflow */
-    overflow-y: auto; /* Enable vertical scrolling only when necessary */
-    display: flex;
-    flex-direction: column;
-}
 
-.card {
-    margin: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
 
 
 /* style.css */
@@ -181,13 +169,6 @@ footer p {
 /* ... (remaining CSS code) ... */
 
 
-@media (max-width: 768px) {
-    .scrollable-container {
-        max-height: 200px; 
-        overflow-y: auto;/* Adjust the maximum height for smaller screens */
-    }
-    
-}
 
 
 

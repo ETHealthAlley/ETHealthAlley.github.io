@@ -10,7 +10,7 @@
 #background {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.753), rgba(0, 0, 0, 0.945)), url(assets/ota.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.534), rgba(0, 0, 0, 0.637)), url(assets/mama.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -77,6 +77,16 @@
 }
 
 /* Style the content */
+.main-scroll-div{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgb(0, 0, 0)), url(assets/grey.webp); /* Set the background color to black */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+
 .content {
     position: absolute;
     top: 50%;
