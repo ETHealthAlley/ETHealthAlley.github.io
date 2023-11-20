@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Webpage</title>
+  <link rel="stylesheet" href="cocoabout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+  <style>
+    .scroll-animated {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .scroll-animated.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<!--navbar-->
+<header class="header">gi
+    <a href="#" class="logo">Portfolio</a>
+    <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="cocoabout.html">About</a>
+      <a href="#services">Services</a> 
+      <a href="#portfolio">Projects</a>
+    
+    </nav>
+  </header>
+
+
+
+  <section class="app" id="app">
+    <div class="heading">
+        <span></span>
+        <h1>About Us</h1>
+    </div>
+    <div class="container">
+        
+        <div class="app-text">
+            <h2></h2>
+            <p>At Et Health Alley, we are trailblazers in closing the divide between health and the community through the power of entertainment. Our core mission is to transform health information into an engaging, accessible, and entertaining experience, empowering individuals to proactively manage their well-being.</p>
+          
+            
+        </div>
+        <div class="app-img">
+            <img src="assets/kizu.jpg" alt="">
+        </div>
+    </div>
+</section>
+   
+
+
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="assets/kizu.jpg" alt="">
+    </div>
+    
+    <div class="about-text">
+        <h2>Why We Shine</h2>
+        <p>Why We Shine Innovative Fusion. Expert Team. Community-Centric. Entertainment.All to empower you with educational information about health and make informed choices.</p>
+       
+    </div>
+</section>
+  
+
+
+
+<div id="contact">
+  <div class="pa">
+      <div class="pro">
+          <p>Our Team</p>
+      </div>
+      <!-- Add the scrollable container here -->
+      <div class="scrollable-container">
+          <div class="contain">
+              <!-- Your card elements here -->
+              <!-- Example card -->
+              <div class="card">
+                  <h2>Card 1</h2>
+                  <img src="assets/dj.jpg" alt="Image 1">
+                  <div class="card-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+              </div>
+              <div class="card">
+                  <h2>Card 1</h2>
+                  <img src="assets/dj.jpg" alt="Image 1">
+                  <div class="card-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+              </div>
+              <div class="card">
+                  <h2>Card 1</h2>
+                  <img src="assets/dj.jpg" alt="Image 1">
+                  <div class="card-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+              </div>
+              <div class="card">
+                  <h2>Card 1</h2>
+                  <img src="assets/dj.jpg" alt="Image 1">
+                  <div class="card-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+              </div>
+              <!-- Repeat the card elements as needed -->
+          </div>
+      </div>
+  </div>
+</div>
+<style>
+  /* Add this CSS for horizontally scrollable content */
+ 
+
+  .scrollable-container {
+      overflow-x: scroll;
+      white-space: nowrap;
+      padding: 20px; /* Add padding for better visual appearance */
+  }
+  .scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+  .contain {
+      display: inline-block;
+      white-space: nowrap;
+  }
+
+  .pro p {
+      color: #0ef;
+      font-size: 50px;
+      width: 100%;
+      margin: 30px auto;
+      text-align: center;
+      margin-top: 3rem;
+      font-weight: bold;
+  }
+
+  .card {
+      flex: 1;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      overflow: hidden;
+      width: 310px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      position: relative;
+      display: inline-block; /* Display cards in a row */
+      white-space: normal; /* Allow text within cards to wrap */
+      vertical-align: top; /* Align cards at the top */
+  }
+
+  .card:hover {
+      transform: translateY(-10px);
+  }
+
+  .card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+  }
+
+  .card:hover img {
+      filter: grayscale(0%);
+  }
+
+  .card-content {
+      padding: 20px;
+      color: black;
+  }
+
+  .card-content p {
+      font-size: 16px;
+      margin: 0;
+  }
+
+  /* Title styles */
+  .card h2 {
+      font-size: 24px;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.7); /* Background color for title */
+      color: white; /* Text color for title */
+      padding: 10px; /* Spacing for title */
+      position: absolute; /* Position the title */
+      top: 0; /* Place title at the top of the card */
+      left: 0; /* Place title at the left of the card */
+      width: 100%; /* Make title full width of the card */
+  }
+
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+      .contain {
+          flex-direction: column; /* Stack cards and title vertically on small screens */
+      }
+
+      .pro {
+          flex-basis: 100%; /* Make the "Projects" title take full width */
+      }
+
+      .card {
+          flex-basis: auto; /* Reset the card flex basis */
+          margin: 10px;
+      }
+  }
+
+  @media screen and (min-width: 769px) {
+      .contain {
+          flex-direction: row; /* Display cards and title horizontally on larger screens */
+          align-items: flex-start; /* Align items to the top */
+      }
+
+      .pro {
+          flex-basis: auto; /* Reset the "Projects" title flex basis */
+          margin-right: 20px; /* Add some spacing between the title and cards */
+      }
+
+      .card {
+          flex-basis: calc(25% - 20px); /* Four cards in a row with gap between them */
+          margin: 10px;
+      }
+  }
+</style>
+<footer class="footer">
+  <div class="footer-text">
+      <p>Copyright & copy; 2023 by Hilina Tesfaye | All Rights Reserved.</p>
+  </div>
+
+  <div class="footer-iconTop">
+      <a href="#home" ><i class='bx bx-up-arrow-alt'></i></a>
+  </div>
+</footer>
+  
+  
+      <!--link to custom js-->
+      <script src="main.js"></script>
+      <script src="script.js"></script>
+      <script>
+          // JavaScript to display details when hovering over a list item
+          const listItems = document.querySelectorAll('.list-item');
+          const detailsContainer = document.querySelector('.details');
+      
+          listItems.forEach((item) => {
+            item.addEventListener('mouseover', () => {
+              detailsContainer.textContent = item.getAttribute('data-info');
+            });
+      
+            item.addEventListener('mouseout', () => {
+              detailsContainer.textContent = '';
+            });
+          });
+        </script>
+         
+    <script>
+      function changeImage(img) {
+        img.src = "19.jpg";
+      }
+  
+      function restoreImage(img) {
+        img.src = "im1.jpg";
+      }
+    </script>
+       <script>
+           const scrollElements = document.querySelectorAll(".scroll-animated");
+   
+           function checkScroll() {
+               scrollElements.forEach((element) => {
+                   const elementTop = element.getBoundingClientRect().top;
+                   if (elementTop < window.innerHeight - 20) {
+                       element.classList.add("animate");
+                   } else {
+                       element.classList.remove("animate");
+                   }
+               });
+           }
+   
+           window.addEventListener("scroll", checkScroll);
+           window.addEventListener("load", checkScroll);
+       </script>
+      
+           <script>
+               const hamburger = document.querySelector(".hamburger");
+               const navMenu = document.querySelector(".nav-menu");
+       
+       
+               hamburger.addEventListener("click", () => {
+                   hamburger.classList.toggle("active");
+                   navMenu.classList.toggle("active");
+               })
+               document.querySelectorAll(".nav-link").forEach(n=> n.
+               addEventListener("click", () => {
+                   hamburger.classList.remove("active");
+                   navMenu.classList.remove("active");
+               }))
+               </script>
+           
+</body>
+</html>
