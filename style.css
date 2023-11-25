@@ -339,6 +339,7 @@ header.sticky{
 }
 
 .contact-content{
+    margin-top: 6rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
