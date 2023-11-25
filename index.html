@@ -3,288 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ET-HealthAlley</title>
-    <link rel="stylesheet" href="style.css">
-     
-    <style>
-        /* Base styles for header */
-        /* Base styles for header */
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            right: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color:rgba(0, 0, 0, 0.74);
-            padding: 20px 0;
-            transition: all 0.5s ease;
-        }
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        .logo h2 {
-            font-size: 30px;
-            font-weight: 700;
-            color: white;
-            margin: 0;
-        }
-
-        .logo span {
-            color: white;
-        }
-
-        .menu-toggle {
-            display: none;
-
-            background-color:rgba(0, 0, 0, 0.664) ;
-        }
-
-        .menu-toggle .ham-icon {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            margin: 6px auto;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu-toggle.active .ham-icon:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .menu-toggle.active .ham-icon:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-toggle.active .ham-icon:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        .navlist {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .navlist li {
-            margin: 0 30px;
-        }
-
-        .navlist a {
-            color: white;
-            font-size: 1.4rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.5s ease;
-        }
-
-        /* Add a new CSS class for the "active" state of the "Home" link */
-        .navlist li a.active-home {
-            color: white; /* Change the text color to white */
-        }
-
-        /* Hover styles for links */
-        .navlist li a:hover {
-            color: rgba(255, 230, 0, 0.486); /* Change text color to white on hover */
-        }
-
-        /* Styles for screens with a max-width of 768px (tablet and below) */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block; /* Show the menu toggle button */
-                cursor: pointer;
-            }
-
-            .navlist {
-                display: none; /* Initially hide the menu items */
-                flex-direction: column;
-                background-color: rgb(206, 206, 206);
-                position: absolute;
-                top: 60px; /* Adjust the top position to prevent overlap with the header */
-                right: 0;
-                width: 100%;
-                z-index: 1001;
-                list-style-type: none; /* Hide the list bullets */ 
-                padding: 0;
-            }
-
-            .menu-toggle.active .ham-icon:nth-child(1),
-            .menu-toggle.active .ham-icon:nth-child(3) {
-                background-color: rgba(0, 0, 0, 0.651);
-            }
-
-            /* Add styles for the "active" state of the links in the mobile menu */
-            .navlist.active {
-                display: flex; /* Show the mobile menu */
-            }
-
-            .navlist li {
-                margin: 10px 0;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h2>ET-Health<span>Alley</span></h2>
-        </div>
-        <div class="menu-toggle">
-            <div class="ham-icon"></div>
-            <div class="ham-icon"></div>
-            <div class="ham-icon"></div>
-        </div>
-        <ul class="navlist">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about.html" id="about-link">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+   <!--header-->
+  <header>
+    <a href="#" class="logo">Et-Health</a>
 
-        </ul>
-        
-    </header>
+    <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#shop">Our Projects</a></li>
+       
+    </ul>
+
+        <div class="bx bx-menu-alt-right" id="menu-icon"></div>
     
-        <div id="background">
-        <div class="content">
-            <h1 class="animated-text"><span>Welcome to ET-Health Alley</span></h1>
-            <p class="subtext">Where we bring health and the community together through the magic of entertainment</p>
-        </div>
-    </div>
-   
-    <div class="anima">
-        <h1>News</h1>
-    </div>
-    <div class="slider">
-        <article class="news-item">
-            <div class="news-content">
-                <img src="assets/new2.jpg" alt="Breaking News">
-                <div class="news-text">
-                    <h2>እፎይታ</h2>
-                    <p>"እፎይታ" - ዘጋቢ ፊልም
-
-                        እፎይታ ጤና ጣቢያ ከጤና ሚኒስቴር  ከ19 ፊልም ኘሮዳክሽን እና ከቻርዳ ፊልም ኘሮዳክሽን ጋር በመተባበር ያዘጋጀውን ዘጋቢ ፊልም አስመረቀ
-                        
-                        በአዲስ አበባ ከተማ ቂርቆስ ክፍለ ከተማ ወረዳ 2 የሚገኘው እፎይታ ጤና ጣቢያ ማኀበረሰብን በጤና ዙሪያ የሚያስተምር እንዲሁም ጤና ጣቢያው የሚሰጠውን ጠቅላላ አገልግሎት የሚዳስስ ዘጋቢ ፊልም ሰርቶ ዛሬ መስከረም 29 ቀን 2014 ዓ.ም በሀያት ሬጀንሲ ሆቴል አስመርቋል።
-                        </p>
-                  
-                </div>
-            </div>
-        </article>
-        <article class="news-item">
-            <div class="news-content">
-                <img src="assets/po.jpg" alt="Technology News">
-                <div class="news-text">
-                    <h2>NEP+</h2>
-                    <p>Collaborating with the Network of Networks of HIV Positives in Ethiopia (NEP+) on the "20 Years Road to Success" activities as a technical team to achieve the goals of this initiative.</p>
-      
-                </div>
-            </div>
-        </article>
-        <!-- Add more news articles here -->
-    </div>
-</main>
-
-<script src="slider.js"></script> <!-- Add the JavaScript file for the slider -->
-<div id="projects">
-<div class="main-scroll-div">
-    <div class="cover">
-        <div class="title">
-            <h4>Projects</h4>
-        </div>
-        <div class="scroll-images">
-            <div class="child"><img class="child-img" src="assets/gg.jpg" alt="image">
-                <div class="layer">
-                    <h3></h3> 
-                    <p>Giving back to the community at HOPE-SBH  June 18,2023 Acknowledging the fathers of  children with spina bifida and hydrocephalus</p>
-                </div>
-            
-            </div>
-            <div class="child"><img class="child-img" src="assets/po.jpg" alt="image">
-                <div class="layer">
-                    <h3></h3> 
-                    <p>Collaborating with the Network of Networks of HIV Positives in Ethiopia (NEP+) on the "20 Years Road to Success" activities as a technical team to achieve the goals of this initiative.</p>
-                </div>
-            </div>
-            <div class="child"><img class="child-img" src="assets/pic3.jpg" alt="image">
-                <div class="layer">
-                    <h3></h3> 
-                    <p>19 film production first documentary                    EFOYTA health centre in collaboration with ministry of health  and Darcha film production prepared documentary movie on the health center activities.</p>
-                </div>
-            </div>
-            <div class="child"><img class="child-img" src="assets/so.avif" alt="image">
-                <div class="layer">
-                    <h3></h3> 
-                    <p></p>
-                </div>
-            
-            </div>
-           
-            
-        </div>
-
-        <div class="dots-container">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-
-            
-        </div>
+  </header>
+<!--new-->
+<div id="background">
+    <div class="content">
+    
+        <h1 class="animated-text">Welcome to,<span>ET-Health Alley</span></h1>
+        <p class="subtext">Where we bring health and the community together through the magic of entertainment</p>
     </div>
 </div>
-</div>
-<script src="script.js"></script>
+  <!--home-->
+ 
 
 
+  <!--container-->
+  
 
-    
-<footer>
-    <p>ET-Health Alley</p>
-    <div class="contact-info">
-        <a href="tel:+123456789"><i class="fas fa-phone-alt"></i> +2511263646</a>
-        <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> ethealthalleyplc@gmail.com</a>
+<!--about us-->
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="assets/fr.png">
     </div>
-    <div class="social">
-        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-    </div>
-    <p>&copy; 2023 ET-Health Alley. Designed by Hilina with love</p>
-</footer>
 
-    <!-- Your website content goes here -->
-    
-    <script>
-        // JavaScript to toggle the navigation menu on and off
-        const menuButton = document.querySelector(".menu-toggle");
-        const navList = document.querySelector(".navlist");
-    
-        menuButton.addEventListener("click", () => {
-            menuButton.classList.toggle("active");
-            navList.classList.toggle("active");
-        });
-    
-        const homeLink = document.querySelector('a[href="#home"]');
-        homeLink.addEventListener("click", () => {
-            // Remove the "active" class from all links
-            document.querySelectorAll('.navlist li a').forEach(link => {
-                link.classList.remove("active", "active-home");
-            });
-            // Add the "active" class to the clicked "Home" link
-            homeLink.classList.add("active", "active-home");
-            // Close the navigation menu (optional)
-            navList.classList.remove("active");
-            menuButton.classList.remove("active");
-        });
-    
-        const aboutLink = document.querySelector('a[href="#about.html"]');
-        aboutLink.addEventListener("click", (event) => {
-            event.preventDefault(); // Prevent the default link behavior
-            // Redirect to the "about.html" page
-            window.location.href = "about.html";
-        });
-    </script>
-    
-    
+    <div class="about-text">
+        <h2>About <span>Us</span></h2>
+        <p>At Et Health Alley, we are trailblazers in closing the divide between health and the community through the power of entertainment. Our core mission is to transform health information into an engaging, accessible, and entertaining experience, empowering individuals to proactively manage their well-being.</p>
+    <a href="#" class="btn">See More<i class='bx bxs-right-arrow'></i></a>
+    </div>
+</section>
+ 
+
+
+<!--our shop-->
+<section class="shop" id="shop">
+    <div class="middle-text">
+        <h4></h4>
+        <h2>Our <span>Projects</span></h2>
+    </div>
+    <div class="shop-content">
+        <div class="row">
+            <img src="assets/gg.jpg">
+            <h3>Acknowledgment</h3>
+            <p>Giving back to the community at HOPE-SBH  June 18,2023 Acknowledging the fathers of  children with spina bifida and hydrocephalus</p>
+            <div class="in-text">
+                <div class="price">
+                    <h6></h6>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="assets/po.jpg">
+            <h3>Networking</h3>
+            <p>Collaborating with the Network of Networks of HIV Positives in Ethiopia (NEP+)  activities as a technical team .</p>
+            <div class="in-text">
+                <div class="price">
+                    <h6></h6>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="assets/eh.jpg">
+            <h3>Documentary</h3>
+            <p>19 film production first documentary EFOYTA health centre in collaboration with ministry of health</p>
+            <div class="in-text">
+                <div class="price">
+                    <h6></h6>
+                </div>
+                
+            </div>
+        </div>
+
+       
+
+
+       
+    </div>
+
+</section>
+
+
+
+<!--contact-->
+<section class="contact" id="contact">
+     <div class="contact-content">
+       
+        <div class="contact-text">
+            <h2>Contact Us</h2>
+            <p>Et-Health Alley</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+               
+            </div>
+
+        </div>
+
+         <div class="details">
+            <div class="main-d">
+                <a href="#"><i class='bx bxl-gmail'></i>ethealthalleyplc@gmail.com</a>
+            </div>
+
+            <div class="main-d">
+                <a href="#"><i class='bx bx-phone'></i>+25112633646</a>
+            </div>
+
+            <div class="main-d">
+                <a href="#">Designed by Hilina Tesfaye</a>
+            </div>
+         </div>
+
+     </div>
+
+</section>
+
+
+
+    <!--link to js-->
+    <script src="script.js"></script>
+
+
+
 </body>
 </html>

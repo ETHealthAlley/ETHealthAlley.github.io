@@ -1,16 +1,85 @@
-/* Reset some default styles */
-* {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Agbalumo&family=Bitter:ital,wght@0,500;1,400;1,600&family=Playfair+Display:ital@0;1&display=swap');
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-   
+    font-family: 'Acme';
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
 }
+:root{
+    --main-color:dodgerblue;
+    --text-color:#fff;
+    --other-color: #212121;
+    --second-color:#9e9e9e;
+    --bg-color:#111111;
+
+
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.1rem;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 14%;
+    transition: all .50s ease;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 33px;
+    font-weight: 700;
+}
+.logo i{
+    vertical-align: middle;
+    margin-right: 8px;
+    color: var(--main-color);
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin: 0 30px;
+    transition: all .50s ease;
+}
+.navlist a:hover{
+    color: dodgerblue;
+}
+.navlist a:active{
+    color: dodgerblue;
+}
+
+#menu-icon{
+    font-size: 32px;
+    color:white;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
 
 /* Style the background */
 #background {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.534), rgba(0, 0, 0, 0.637)), url(assets/mama.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.699), rgba(0, 0, 0, 0.836)), url(assets/group.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -35,7 +104,9 @@
     color:white;
     z-index: 1; /* Place content above the background */
 }
-
+.content p{
+    color: white;
+}
 .animated-text {
     font-size: 48px;
     font-weight: bold;
@@ -48,76 +119,6 @@
     color: grey;
 }
 
-
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
-}
-
-/* Style the background */
-#background {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.753), rgba(0, 0, 0, 0.945)), url(assets/ota.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-
-.background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.3); 
-/* Adjust the brightness value (0.3 for darker) */
-}
-
-/* Style the content */
-.main-scroll-div{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgb(0, 0, 0)), url(assets/grey.webp); /* Set the background color to black */
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-
-
-
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color:white;
-    z-index: 1; /* Place content above the background */
-}
-
-.animated-text {
-    font-size: 48px;
-    font-weight: bold;
-    animation: textAnimation 3s ease infinite; /* Apply the text animation */
-}
-
-.subtext {
-    font-size: 24px;
-    margin-top: 20px;
-    color: white;
-}
-/* Base styles for all screen sizes */
-body {
-    font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(black, rgb(3, 23, 32));
-   /* background-image: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.822)), url(assets/kilo.avif);*/
-}
-
-/* Animated text effect (no change) */
 @keyframes slide {
     0% {
         transform: translateX(-100%);
@@ -137,702 +138,378 @@ body {
     text-align: center;
 }
 
-/* Styles for the slider (no change) */
-#slider {
-    display: flex;
-    overflow: hidden;
-    flex-direction: column; /* Change to a column layout */
-}
 
-.news-item {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section{
+    padding: 70px 14% 60px;
+}
+.home{
+    position: relative;
+    height: 100vh;
     width: 100%;
-    margin-right: 1rem;
-    margin-bottom: 20px; 
-/* Add margin between news items */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
 }
-
-.news-content {
-    display: flex; /* Keep the default row layout for content */
-    flex-direction: row; /* Ensure a row layout */
-    align-items: center; /* Center vertically */
-}
-
-.news-content img {
-    max-width: 40%; /* Adjust image width to make it smaller */
+.home-img img{
+    width: 100%;
     height: auto;
-    border-radius: 10px; /* Add rounded corners to the image */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-    transition: transform 0.3s ease-in-out;
 }
-
-.news-content:hover img {
-    transform: scale(1.05); /* Enlarge images slightly on hover */
+.home-text h1{
+    font-size: var(--big-font);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 3rem;
 }
-
-.news-text {
-    padding-left: 20px; /* Add left padding for text */
-    text-align: left;
-    margin-left: 1.5rem;
-    color: white;
-/* Align text to the left */
+span{
+    color: dodgerblue;
 }
-
-.news-text h2 {
-    font-size: 24px;
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--other-color);
+    color: var(--main-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 3rem;
+    transition: all .50s ease;
+    margin-top: 2rem;
 }
-
-
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-    .slider {
-        display: flex;
-        overflow: hidden;
-        flex-direction: column; /* Change to a column layout */
-    }
-
-    .news-item {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px; /* Add margin between news items */
-    }
-
-    .news-content {
-        flex-direction: column; /* Change to a column layout for content */
-    }
-
-    .news-content {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        height: 100%; /* Ensure the container takes up full height */
-    }
-
-    .news-content img {
-        max-width: 100%; /* Adjust image width to fit smaller screens */
-        height: auto;
-        border-radius: 10px; /* Add rounded corners to the image */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .news-content:hover img {
-        transform: scale(1.05); /* Enlarge images slightly on hover */
-    }
-
-    .news-text {
-        padding-left: 0; /* Remove left padding for text */
-        text-align: center; /* Center text under the image */
-    }
-
-    .news-text h2 {
-        font-size: 24px;
-    }
+.btn i{
+    vertical-align: middle;
+    margin-left: 9px;
+    font-size: 22px;
 }
-
-
-
-/* Base styles */
-
-.main-scroll-div {
+.btn:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: #ff9f0d 0px 1px 25px;
+}
+header.sticky{
+    padding: 12px 14%;
+    background: var(--other-color);
+}
+.container {
+    padding:30px 14% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, auto));
+    gap: 2rem;
+    text-align: center;
+}
+.container-box{
+    padding: 43px 43px 43px 43px;
+    background: var(--other-color);
+    border-radius: 3rem;
+}
+.container-box img{
     width: 100%;
-    height: 100%;
+    max-height: 70px;
+    height: auto;
+}
+.container-box h3{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+.container-box a{
+    color:var(--second-color);
+    font-size: var(--p-font);
+    letter-spacing: 1px;
+    transition:all .50s ease ;
+}
+.container-box a:hover{
+    color: var(--main-color);
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 4rem;
+    color: dodgerblue;
+}
+.about-img img{
+    width:100%;
+    height: auto;
+}
+.about-text h2{
+    font-size: var(--h2-font);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+.about span{
+  color: white;
+}
+.about-text p{
+    color:var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+}
+.middle-text{
+    text-align: center;
+}
+.middle-text h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+.middle-text h2{
+    font-size: var(--h2-font);
+    color: dodgerblue;
+}
+.middle-text span{
+    color: white;
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap:2rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+.row{
+    position:relative ;
+    padding: 10px 35px 40px;
+    background: var(--other-color);
+    border-radius: 3rem;
+}
+.row img{
+    width:100%;
+    height: auto;
+    transition: transform .50s ease;
+    cursor: pointer;
+}
+.row h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: dodgerblue;
+}
+.row p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 1.1rem;
+}
+.in-text{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid black;
-    overflow: hidden;
-    margin-top: 5rem;
-    background-color: #040914;
- /*   background-image: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.822)), url(assets/about.jpg); */
 }
-
-.cover {
-    
-    position: relative;
-    width: 100%;
-    height: 100%;
+.in-text .price h6{
+    font-size: 17px;
+    color: var(--main-color);
+    font-weight: 600;
 }
-.cover h4 {
-
-    color: rgb(51, 122, 216);
-    font-size: 50px;
-    width: 100%;
-    margin: 30px auto;
-    text-align: center;
-}
-
-.scroll-images {
-   margin-bottom: 2rem;
-    text-align: center;
-
-    margin-top: 4rem;
-    display: flex;
-    width: auto;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-.child {
-    flex: 0 0 auto;
-    width: 600px;
-    height: 450px;
-    margin-right: 10px;
-    cursor: pointer;
-    border: 1px solid white;
-    overflow: hidden;
-    scroll-snap-align: start;
-}
-
-.child-img {
-    width: 100%;
-    height: 100%;
-}
-
-.dots-container {
-
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 7rem;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.active-dot {
-    background-color: red;
-}
-
-.scroll-images {
-    display: flex;
-    width: auto;
-    overflow-x: hidden; /* Hide the horizontal scrollbar */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-/* style.css */
-/* ... (existing styles) */
-
-.child {
-    flex: 0 0 auto;
-    width: 400px;
-    height: 300px;
-    margin-right: 10px;
-    cursor: pointer;
-    border: 1px solid white;
-    overflow: hidden;
-    scroll-snap-align: start;
-    position: relative;
-    transition: transform 0.3s ease; /* Add a smooth transform transition */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
-}
-
-
-
-.child-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-}
-
-.layer {
-    width: 100%; /* Set the width to 100% to match the image width */
-    height: 100%; /* Set the height to 100% to match the image height */
-    opacity: 0; /* Initially hide the layer text */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #6b9ee0);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    padding: 20px;
-    box-sizing: border-box;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+.in-text .s-btn a{
+    display: inline-block;
+    padding: 9px 23px;
+    background: var(--bg-color);
+    color: var(--main-color);
     font-size: 14px;
-    transition: opacity 0.5s;
-}
-
-.layer h3 {
     font-weight: 500;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.layer p {
-    font-size: 14px;
-    margin: 0;
-    text-align: center;
-}
-
-
-.layer p {
-    font-size: 14px;
-    margin: 0;
-    text-align: center;
-}
-
-.child:hover {
-    transform: scale(1.1); /* Expand the project on hover */
-}
-
-.child:hover .layer {
-    opacity: 1; /* Show the layer text on hover */
-}
-
-/* ... (rest of your styles) */
-.scroll-images {
-    display: flex;
-    width: auto;
-    overflow-x: hidden; /* Hide the horizontal scrollbar */
-    overflow-y: hidden; /* Hide the vertical scrollbar */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .main-scroll-div {
-        height: auto; /* Adjust height for smaller screens */
-    }
-
-    .scroll-images {
-        overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
-    }
-
-    .child {
-        width: 90%; /* Adjust width for smaller screens */
-        max-width: none; /* Remove max-width for smaller screens */
-        margin-right: 10px;
-    }
-
-    .cover h4 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
-    }
-}
-
-
-
-
-footer {
-    position: relative;
-    width: 100%;
-    height: auto; /* Change height to auto to allow content to expand */
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Add padding to create space around content */
-}
-
-footer p:nth-child(1){
-    font-size: 30px;
-    color:white;
-    font-weight: bold;
-}
-
-footer p:nth-child(2){
-    font-size: 17px;
-    color: grey;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin for spacing */
-}
-.contact-info a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: grey;
-    font-size: 17px;
-    margin: 10px 0; /* Adjust margin for spacing between contact info */
-}
-.contact-info a i {
-    margin-right: 5px; /* Add spacing between icon and text */
-}
-.social{
-    display: flex;
-    margin-bottom: 20px; /* Add margin for spacing */
-}
-
-.social a{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #3f5e99;
-    border-radius: 50%;
-    margin: 0 10px; /* Adjust margin for spacing between icons */
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.social a:hover{
-    transform: scale(1.3);
-    transition: .3s;
-}
-footer p {
-    font-size: 14px; /* Set the font size */
-    color: white; /* Set the text color */
-    margin-bottom: 10px; /* Add some space at the bottom of the <p> elements */
-    /* You can add more CSS properties as needed */
-}
-.end{
-    position: absolute;
-    color: grey;
-    bottom: px; /* Adjust the position from the bottom */
-    font-size: 14px;
-}
-
-/* Media query for screens with a maximum width of 768px */
-@media (max-width: 768px) {
-    footer {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-    .contact-info a {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-    .contact-info a i {
-        font-size: 16px; /* Adjust icon size for smaller screens */
-        margin-right: 3px; /* Adjust spacing between icon and text */
-    }
-
-    .social {
-        flex-wrap: wrap; /* Allow social icons to wrap on smaller screens */
-    }
+    letter-spacing: 1px;
+    border-radius: 3rem;
+    transition: all .50s ease;
     
-    .social a {
-        margin: 10px; /* Adjust margin for spacing between icons on smaller screens */
-    }
-    footer p {
-        font-size: 14px;
-    }
-    .end {
-        position: static; /* Remove absolute positioning on smaller screens */
-        text-align: center; /* Center-align the end text on smaller screens */
-    }
 }
-
-/* Media Queries for Responsiveness */
-@media screen and (max-width: 768px) {
-    .project {
-        flex-basis: calc(100% - 20px); /* Full width for one column on smaller screens */
-    }
-
-    .project img {
-        height: auto; /* Reset the height to auto for responsive display */
-    }
-
-    .project:nth-child(2) {
-        order: -1; /* Move the second project to the top */
-    }
+.in-text .s-btn a:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: #ff9f0d 0px 1px 25px;
 }
-
-/* Media Query for smaller screens */
-@media (min-width: 768px) {
-    .image-text {
-        flex-direction: row; /* Display items side by side on larger screens */
-    }
-
-    .image-text img {
-        max-width: 50%; /* Adjust image width on larger screens */
-        flex: 1; /* Allow image to grow and shrink */
-    }
-
-    .text-content {
-        flex: 1; /* Allow text content to grow and shrink */
-    }
+.contact-content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
-/* Define the text animation */
-@keyframes textAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .animated-text {
-        font-size: 36px;
-    }
-
-    .subtext {
-        font-size: 18px;
-    }
-}
-
-
-
-
-/* Base styles */
-#projects {
-    padding: 80px 0px;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.753), rgba(0, 0, 0, 0.945)), url(assets/pt.png);
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'IBM Plex Serif', serif, 'Lora', serif, 'Zilla Slab', serif;
-    --h2-font: 2.6rem;
-    --p-font: 1.5rem;
-    height: 100%;
-    width: 100%;
-}
-
-.title h4 {
-    color: white;
-    font-size: 60px;
-    width: 100%;
-    margin: 30px auto;
+.contact-text{
     text-align: center;
+    margin-bottom: 4rem;
 }
-
-.project-list {
+.contact-text h2{
+    font-size: var(--h2-font);
+    margin-bottom: 10px;
+}
+.contact-text p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    max-width: 950px;
+    line-height: 30px;
+    margin-bottom: 3rem;
+}
+.social i{
+    display: inline-block;
+    font-size: 32px;
+    color: var(--second-color);
+    margin: 0 20px;
+    transition: all .50s ease;
+}
+.social .clr i{
+    color: var(--main-color);
+}
+.social i:hover{
+    color: var(--main-color);
+}
+.details{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center projects horizontally */
-    align-items: center; /* Center projects vertically */
-    margin-top: 50px;
-    margin-left: -10px;
-    margin-right: -10px;
+    align-items: center;
+    gap: 3rem;
 }
-
-.project {
-    flex-basis: calc(33.33% - 20px); /* Adjust the percentage for the desired box size and spacing */
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 10px;
-    position: relative;
-    transition: transform 0.5s; /* Added transition here */
-}
-
-.project img {
-    width: 100%; /* Make the image width 100% */
-    height: 200px; /* Set a fixed height for the images */
-    border-radius: 5px;
-    display: block;
-    object-fit: cover;
-}
-
-.layer {
-    width: 100%; /* Set the width to 100% to match the image width */
-    height: 100%; /* Set the height to 100% to match the image height */
-    opacity: 0; /* Initially hide the layer text */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #0f1720);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    padding: 20px;
-    box-sizing: border-box;
-    color: white;
+.main-d a{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    font-size: 14px;
-    transition: opacity 0.5s;
-}
-
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.layer p {
-    font-size: 14px;
-    margin: 0;
-    text-align: center;
-}
-
-.project:hover {
-    transform: scale(1.1); /* Expand the project on hover */
-}
-
-.project:hover .layer {
-    opacity: 1; /* Show the layer text on hover */
-}
-
-
-
-
-footer {
-    position: relative;
-    width: 100%;
-    height: auto; /* Change height to auto to allow content to expand */
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Add padding to create space around content */
-}
-
-footer p:nth-child(1){
-    font-size: 30px;
-    color:white;
-    font-weight: bold;
-}
-
-footer p:nth-child(2){
-    font-size: 17px;
-    color: grey;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin for spacing */
-}
-.contact-info a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: grey;
-    font-size: 17px;
-    margin: 10px 0; /* Adjust margin for spacing between contact info */
-}
-.contact-info a i {
-    margin-right: 5px; /* Add spacing between icon and text */
-}
-.social{
-    display: flex;
-    margin-bottom: 20px; /* Add margin for spacing */
-}
-
-.social a{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border-radius: 50%;
-    margin: 0 10px; /* Adjust margin for spacing between icons */
-    color: white;
-    text-decoration: none;
+    color: var(--text-color);
     font-size: 20px;
+    font-weight: 600;
 }
 
-.social a:hover{
-    transform: scale(1.3);
-    transition: .3s;
+.main-d i{
+    vertical-align: middle;
+    margin-right: 12px;
+    font-size: 28px;
+    color: var(--main-color);
 }
-
-.end{
+@media(max-width: 1545px){
+    header{
+        padding: 22px 4%;
+        transition: .2s;
+    }
+    header.sticky{
+        padding: 14px 4%;
+        transition: .2s;
+    }
+    section{
+        padding: 50px 4% 40px;
+        transition: .2s;
+    }
+    .container{
+        padding: 30px 4% 50px;
+    }
+}
+@media(max-width: 1180px){
+    :root{
+        --big-font: 4rem;
+        --h2-font:2.2rem;
+        --p-font:15px;
+    }
+    .home{
+        height: 85vh;
+    }
+}
+@media(max-width: 1060px){
+ #menu-icon{
+    display: initial;
+ }
+ .navlist{
     position: absolute;
-    color: grey;
-    bottom: px; /* Adjust the position from the bottom */
-    font-size: 14px;
+    top:-1000px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: var(--other-color);
+    transition: all .50s ease;
+ }
+ .navlist a{
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-left: 2px solid var(--main-color);
+ }
+ .navlist.open{
+    top: 100%;
+ } 
 }
+@media(max-width: 1045px){
+ :root{
+    --bg-font:3.3rem;
+    --h2-font: 2.2rem;
+    --p-font: 15px;
+ }
+ .home-img img{
+    width: 100%;
+    max-width: 490px;
+    height: auto;
+ }
+ .about-img img{
+    width:100% ;
+    max-width: 490px;
+    height: auto;
+ }
+ .home{
+    height: 70vh;
+ }
+}
+@media(max-width: 860px){
+.home{
+    grid-template-columns: 1fr;
+    height: 118vh;
+}
+.home-text{
+    padding-top: 60px;
+}
+.home-img{
+    text-align: center;
+}
+.about{
+    grid-template-columns: 1fr;
+}
+.about-img{
+    text-align: center;
+}
+}
+@media(max-width: 520px){
+ .contact-img{
+    gap:1.5rem;
+ }
+ .contact-img img{
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+ }
+ .social i{
+    margin: 0 10px;
+ }
+ .contact-text p{
+    max-width: 100%;
+ }
+ .details{
+    gap: 1.5rem;
+ }
 
-/* Media query for screens with a maximum width of 768px */
-@media (max-width: 768px) {
-    footer {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-    .contact-info a {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-    .contact-info a i {
-        font-size: 16px; /* Adjust icon size for smaller screens */
-        margin-right: 3px; /* Adjust spacing between icon and text */
-    }
-
-    .social {
-        flex-wrap: wrap; /* Allow social icons to wrap on smaller screens */
-    }
-    
-    .social a {
-        margin: 10px; /* Adjust margin for spacing between icons on smaller screens */
-    }
-    
-    .end {
-        position: static; /* Remove absolute positioning on smaller screens */
-        text-align: center; /* Center-align the end text on smaller screens */
+}
+@media(max-width: 475px){
+    :root{
+        --big-font: 2.8rem;
+        --h2-font:2rem;
     }
 }
-
-/* Media Queries for Responsiveness */
-@media screen and (max-width: 768px) {
-    .project {
-        flex-basis: calc(100% - 20px); /* Full width for one column on smaller screens */
-    }
-
-    .project img {
-        height: auto; /* Reset the height to auto for responsive display */
-    }
-
-    .project:nth-child(2) {
-        order: -1; /* Move the second project to the top */
-    }
-}
-
-/* Media Query for smaller screens */
-@media (min-width: 768px) {
-    .image-text {
-        flex-direction: row; /* Display items side by side on larger screens */
-    }
-
-    .image-text img {
-        max-width: 50%; /* Adjust image width on larger screens */
-        flex: 1; /* Allow image to grow and shrink */
-    }
-
-    .text-content {
-        flex: 1; /* Allow text content to grow and shrink */
-    }
-}
-/* Define the text animation */
-@keyframes textAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .animated-text {
-        font-size: 36px;
-    }
-
-    .subtext {
-        font-size: 18px;
-    }
+@media(max-width: 440px){
+ .home{
+    height: 110vh;
+    gap: 0.1rem;
+ }
 }

@@ -1,419 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+  <title>Simple Webpage</title>
+  <link rel="stylesheet" href="about.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     
-    <style>
-        /* Apply styles to the body */
-        body {
-    background-color: silver;
-    background-size: cover; /* Cover the entire viewport */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-attachment: fixed; /* Fixed background position */
-    /* ... other styles ... */
-}
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+  <style>
+    .scroll-animated {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
+    }
 
-        /* Style the title */
-        h1 {
-            color: white;
-    font-size: 50px;
-    width: 100%;
-    margin: 30px auto;
-    text-align: center;
-    margin-top: 3rem;
-    font-weight: bold;
-        }
+    .scroll-animated.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<!--navbar-->
+<header>
+    <a href="#" class="logo">ET-Health</a>
 
-        /* Style the paragraph */
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: silver; /* Change to your desired text color */
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: transparent; /* Change to your desired background color */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-    </style>
-         <style>
-            /* Base styles for header */
-            /* Base styles for header */
-            header {
-                position: fixed;
-                width: 100%;
-                top: 0;
-                right: 0;
-                z-index: 1000;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background-color:rgba(0, 0, 0, 0.74);
-                padding: 20px 0;
-                transition: all 0.5s ease;
-            }
-    
-            .logo h2 {
-                font-size: 30px;
-                font-weight: 700;
-                color: white;
-                margin: 0;
-            }
-    
-            .logo span {
-                color: white;
-            }
-    
-            .menu-toggle {
-                display: none;
-    
-                background-color:rgba(0, 0, 0, 0.664) ;
-            }
-    
-            .menu-toggle .ham-icon {
-                display: block;
-                width: 30px;
-                height: 3px;
-                background-color: white;
-                margin: 6px auto;
-                border-radius: 4px;
-                transition: background-color 0.3s ease;
-            }
-    
-            .menu-toggle.active .ham-icon:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-    
-            .menu-toggle.active .ham-icon:nth-child(2) {
-                opacity: 0;
-            }
-    
-            .menu-toggle.active .ham-icon:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-    
-            .navlist {
-                display: flex;
-                list-style-type: none;
-                padding: 0;
-            }
-    
-            .navlist li {
-                margin: 0 30px;
-            }
-    
-            .navlist a {
-                color: white;
-                font-size: 1.4rem;
-                font-weight: 600;
-                text-decoration: none;
-                transition: color 0.5s ease;
-            }
-    
-            /* Add a new CSS class for the "active" state of the "Home" link */
-            .navlist li a.active-home {
-                color: white; /* Change the text color to white */
-            }
-    
-            /* Hover styles for links */
-            .navlist li a:hover {
-                color: rgba(255, 230, 0, 0.486); /* Change text color to white on hover */
-            }
-    
-            /* Styles for screens with a max-width of 768px (tablet and below) */
-            @media (max-width: 768px) {
-                .menu-toggle {
-                    display: block; /* Show the menu toggle button */
-                    cursor: pointer;
-                }
-    
-                .navlist {
-                    display: none; /* Initially hide the menu items */
-                    flex-direction: column;
-                    background-color: rgb(206, 206, 206);
-                    position: absolute;
-                    top: 60px; /* Adjust the top position to prevent overlap with the header */
-                    right: 0;
-                    width: 100%;
-                    z-index: 1001;
-                    list-style-type: none; /* Hide the list bullets */ 
-                    padding: 0;
-                }
-    
-                .menu-toggle.active .ham-icon:nth-child(1),
-                .menu-toggle.active .ham-icon:nth-child(3) {
-                    background-color: rgba(0, 0, 0, 0.651);
-                }
-    
-                /* Add styles for the "active" state of the links in the mobile menu */
-                .navlist.active {
-                    display: flex; /* Show the mobile menu */
-                }
-    
-                .navlist li {
-                    margin: 10px 0;
-                }
-            }
-        </style>
+    <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html">Our Projects</a></li>
+       
+    </ul>
 
+        <div class="bx bx-menu-alt-right" id="menu-icon"></div>
+    
+  </header>
+
+
+  <section class="app" id="app">
+    <div class="heading">
+        <h1>About   <span> Us</span></h1>
+    </div>
+    <div class="container">
+        
+        <div class="app-text">
+            <h2></h2>
+            <p>At Et Health Alley, we are trailblazers in closing the divide between health and the community through the power of entertainment. Our core mission is to transform health information into an engaging, accessible, and entertaining experience, empowering individuals to proactively manage their well-being.</p>
+          
+            
+        </div>
+        <div class="app-img">
+            <img src="assets/kizu.jpg" alt="">
+        </div>
+    </div>
+</section>
+   
+
+
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="assets/kizu.jpg" alt="">
+    </div>
+    
+    <div class="about-text">
+        <h2>Why We <span>  Shine</span></h2>
+        <p>Why We Shine Innovative Fusion. Expert Team. Community-Centric. Entertainment.All to empower you with educational information about health and make informed choices.</p>
+       
+    </div>
+</section>
+  
 
 
 <style>
-    /* Add this CSS for horizontally scrollable content */
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: grey;
-    }
     .main-scroll-div{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.411), rgb(0, 0, 0)), url(assets/boja.jpg); /* Set the background color to black */
-        background-position: center;
-    background-size: cover;
-    position: relative;
-    }
-    .scrollable-container {
-        overflow-x: scroll;
-        white-space: nowrap;
-        padding: 20px; /* Add padding for better visual appearance */
-    }
-    .scrollable-container::-webkit-scrollbar {
-    display: none;
+background-image: linear-gradient(rgba(0, 0, 0, 0.411), rgb(0, 0, 0)), url(assets/boja.jpg); /* Set the background color to black */
+background-position: center;
+background-size: cover;
+position: relative;
 }
-    .contain {
-        display: inline-block;
-        white-space: nowrap;
-    }
+.scrollable-container {
+overflow-x: scroll;
+white-space: nowrap;
+padding: 20px; /* Add padding for better visual appearance */
+}
+.scrollable-container::-webkit-scrollbar {
+display: none;
+}
+.cont {
+display: inline-block;
+white-space: nowrap;
+}
 
-    .pro p {
-        color: white;
-        font-size: 50px;
-        width: 100%;
-        margin: 30px auto;
-        text-align: center;
-        margin-top: 3rem;
-        font-weight: bold;
-        
-    }
+.pro p {
+color: white;
+font-size: 50px;
+width: 100%;
+margin: 30px auto;
+text-align: center;
+margin-top: 3rem;
+font-weight: bold;
 
-    .card {
-        flex: 1;
-        background-color:rgba(221, 217, 217, 0.555);
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(53, 53, 53, 0.2);
-        margin: 10px;
-        overflow: hidden;
-        width: 310px;
-        text-align: center;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        position: relative;
-        display: inline-block; /* Display cards in a row */
-        white-space: normal; /* Allow text within cards to wrap */
-        vertical-align: top; /* Align cards at the top */
-    }
+}
 
-    .card:hover {
-        transform: translateY(-10px);
-    }
+.card {
+flex: 1;
+background-color:rgba(221, 217, 217, 0.555);
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(53, 53, 53, 0.2);
+margin: 10px;
+overflow: hidden;
+width: 310px;
+text-align: center;
+cursor: pointer;
+transition: transform 0.3s ease;
+position: relative;
+display: inline-block; /* Display cards in a row */
+white-space: normal; /* Allow text within cards to wrap */
+vertical-align: top; /* Align cards at the top */
+}
 
-    .card img {
-        max-width: 300px;
-        height: 210px;
-        object-fit: cover;
-        filter: grayscale(100%);
-        transition: filter 0.3s ease;
-    }
+.card:hover {
+transform: translateY(-10px);
+}
 
-    .card:hover img {
-        filter: grayscale(0%);
-    }
+.card img {
+max-width: 300px;
+height: 210px;
+object-fit: cover;
+filter: grayscale(100%);
+transition: filter 0.3s ease;
+}
 
-    .card-content { 
-        padding: 20px;
-        color: silver;
-    }
+.card:hover img {
+filter: grayscale(0%);
+}
 
-    .card-content p {
-        font-size: 15px;
-        margin: 0;
-    }
+.card-content { 
+padding: 20px;
+color: silver;
+}
 
-    /* Title styles */
-    .card h2 {
-        font-size: 24px;
-        margin: 0;
-        background-color: rgba(0, 0, 0, 0.7); /* Background color for title */
-        color: white; /* Text color for title */
-        padding: 10px; /* Spacing for title */
-        position: absolute; /* Position the title */
-        top: 0; /* Place title at the top of the card */
-        left: 0; /* Place title at the left of the card */
-        width: 100%; /* Make title full width of the card */
-    }
+.card-content p {
+font-size: 15px;
+margin: 0;
+}
 
-    /* Media queries for responsiveness */
-    @media screen and (max-width: 768px) {
-        .contain {
-            flex-direction: column; /* Stack cards and title vertically on small screens */
-        }
+/* Title styles */
+.card h2 {
+font-size: 24px;
+margin: 0;
+background-color: rgba(0, 0, 0, 0.7); /* Background color for title */
+color: white; /* Text color for title */
+padding: 10px; /* Spacing for title */
+position: absolute; /* Position the title */
+top: 0; /* Place title at the top of the card */
+left: 0; /* Place title at the left of the card */
+width: 100%; /* Make title full width of the card */
+}
 
-        .pro {
-            flex-basis: 100%; /* Make the "Projects" title take full width */
-        }
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+.cont {
+    flex-direction: column; /* Stack cards and title vertically on small screens */
+}
 
-        .card {
-            flex-basis: auto; /* Reset the card flex basis */
-            margin: 10px;
-        }
-    }
+.pro {
+    flex-basis: 100%; /* Make the "Projects" title take full width */
+}
 
-    @media screen and (min-width: 769px) {
-        .contain {
-            flex-direction: row; /* Display cards and title horizontally on larger screens */
-            align-items: flex-start; /* Align items to the top */
-        }
+.card {
+    flex-basis: auto; /* Reset the card flex basis */
+    margin: 10px;
+}
+}
 
-        .pro {
-            flex-basis: auto; /* Reset the "Projects" title flex basis */
-            margin-right: 20px; /* Add some spacing between the title and cards */
-        }
+@media screen and (min-width: 769px) {
+.cont {
+    flex-direction: row; /* Display cards and title horizontally on larger screens */
+    align-items: flex-start; /* Align items to the top */
+}
 
-        .card {
-            flex-basis: calc(25% - 20px); /* Four cards in a row with gap between them */
-            margin: 10px;
-        }
-    }
+.pro {
+    flex-basis: auto; /* Reset the "Projects" title flex basis */
+    margin-right: 20px; /* Add some spacing between the title and cards */
+}
+
+.card {
+    flex-basis: calc(25% - 20px); /* Four cards in a row with gap between them */
+    margin: 10px;
+}
+}
+
 </style>
 
 
-
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h2>ET-Health<span>Alley</span></h2>
+<div id="conta">
+    <div class="pa">
+        <div class="pro">
+            <p>About</p>
         </div>
-        <div class="menu-toggle">
-            <div class="ham-icon"></div>
-            <div class="ham-icon"></div>
-            <div class="ham-icon"></div>
-        </div>
-        <ul class="navlist">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about.html" id="about-link">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-
-        </ul>       
-    </header>
-    <div class="main-scroll-div">
-        <div class="cover">
-    <h1>About Us</h1>
-    <p>At Et Health Alley, we are trailblazers in closing the divide between health and the community through the power of entertainment. Our core mission is to transform health information into an engaging, accessible, and entertaining experience, empowering individuals to proactively manage their well-being.</p>
-    <h1>why we shine</h1>
-    <p>Why We Shine Innovative Fusion. Expert Team. Community-Centric. Entertainment.All to empower you with educational information about health and make informed choices.</p>
-    <div id="contact">
-        <div class="pa">
-            <div class="pro">
-                <p>About</p>
-            </div>
-            <!-- Add the scrollable container here -->
-            <div class="scrollable-container">
-                <div class="contain">
-                    <!-- Your card elements here -->
-                    <!-- Example card -->
-                    <div class="card">
-                        <h2>Card 1</h2>
-                        <img src="assets/zelalm.jpg" alt="Image 1">
-                        <div class="card-content">
-                            <p>Chief Executive Officer  - Zelalem Gizachew</p>
-                        </div>
+        <!-- Add the scrollable container here -->
+        <div class="scrollable-container">
+            <div class="cont">
+                <!-- Your card elements here -->
+                <!-- Example card -->
+                <div class="card">
+                    <h2>Card 1</h2>
+                    <img src="assets/zelalm.jpg" alt="Image 1">
+                    <div class="card-content">
+                        <p>Chief Executive Officer  - Zelalem Gizachew</p>
                     </div>
-                    <div class="card">
-                        <h2>Card 1</h2>
-                        <img src="assets/kizu.jpg" alt="Image 1">
-                        <div class="card-content">
-                            <p>Entertainment and event deputy chief executive officer - Meron Tesfaye </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>Card 1</h2>
-                        <img src="assets/dj.jpg" alt="Image 1">
-                        <div class="card-content">
-                            <p>Administrative and Finance Deputy executive officer- Dereje Werkie</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>Card 1</h2>
-                        <img src="assets/es.jpg" alt="Image 1">
-                        <div class="card-content">
-                            <p>Health and research deputy chief executive office - Dr Etsehiwot Haileselassie</p>
-                        </div>
-                    </div>
-                    <!-- Repeat the card elements as needed -->
                 </div>
+                <div class="card">
+                    <h2>Card 1</h2>
+                    <img src="assets/kizu.jpg" alt="Image 1">
+                    <div class="card-content">
+                        <p>Entertainment and event deputy chief executive officer - Meron Tesfaye </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Card 1</h2>
+                    <img src="assets/dj.jpg" alt="Image 1">
+                    <div class="card-content">
+                        <p>Administrative and Finance Deputy executive officer- Dereje Werkie</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Card 1</h2>
+                    <img src="assets/es.jpg" alt="Image 1">
+                    <div class="card-content">
+                        <p>Health and research deputy chief executive office - Dr Etsehiwot Haileselassie</p>
+                    </div>
+                </div>
+                <!-- Repeat the card elements as needed -->
             </div>
         </div>
     </div>
-
-    <!-- Rest of your HTML content -->
-
+</div>
 
 
 
 
 
 
-<footer>
-    <p>ET-Health Alley</p>
-    <div class="contact-info">
-        <a href="tel:+123456789"><i class="fas fa-phone-alt"></i> +2511263646</a>
-        <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> ethealthalleyplc@gmail.com</a>
+<!--contact-->
+<section class="contact" id="contact">
+    <div class="contact-content">
+      
+       <div class="contact-text">
+           <h2>Contact Us</h2>
+           <p>Et-Health Alley</p>
+           <div class="social">
+               <a href="#"><i class='bx bxl-facebook'></i></a>
+               <a href="#"><i class='bx bxl-github'></i></a>
+               <a href="#"><i class='bx bxl-linkedin'></i></a>
+               <a href="#"><i class='bx bxl-twitter'></i></a>
+              
+           </div>
+
+       </div>
+
+        <div class="details">
+           <div class="main-d">
+               <a href="#"><i class='bx bxl-gmail'></i>ethealthalleyplc@gmail.com</a>
+           </div>
+
+           <div class="main-d">
+               <a href="#"><i class='bx bx-phone'></i>+25112633646</a>
+           </div> 
+
+           <div class="main-d">
+               <a href="#">Designed by Hilina Tesfaye</a>
+           </div>
+        </div>
+
     </div>
-    <div class="social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-    <p>&copy; 2023 ET-Health Alley. Designed by hilina with love</p>
-</footer>
-<script>
-    // JavaScript to toggle the navigation menu on and off
-    const menuButton = document.querySelector(".menu-toggle");
-    const navList = document.querySelector(".navlist");
 
-    menuButton.addEventListener("click", () => {
-        menuButton.classList.toggle("active");
-        navList.classList.toggle("active");
-    });
+</section>
 
-    const homeLink = document.querySelector('a[href="#home"]');
-    homeLink.addEventListener("click", () => {
-        // Remove the "active" class from all links
-        document.querySelectorAll('.navlist li a').forEach(link => {
-            link.classList.remove("active", "active-home");
-        });
-        // Add the "active" class to the clicked "Home" link
-        homeLink.classList.add("active", "active-home");
-        // Close the navigation menu (optional)
-        navList.classList.remove("active");
-        menuButton.classList.remove("active");
-    });
 
-    const aboutLink = document.querySelector('a[href="#about.html"]');
-    aboutLink.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent the default link behavior
-        // Redirect to the "about.html" page
-        window.location.href = "about.html";
-    });
-</script>
+  
+  
+      <!--link to custom js-->
+      <script src="main.js"></script>
+      <script src="script.js"></script>
+      <script>
+          // JavaScript to display details when hovering over a list item
+          const listItems = document.querySelectorAll('.list-item');
+          const detailsContainer = document.querySelector('.details');
+      
+          listItems.forEach((item) => {
+            item.addEventListener('mouseover', () => {
+              detailsContainer.textContent = item.getAttribute('data-info');
+            });
+      
+            item.addEventListener('mouseout', () => {
+              detailsContainer.textContent = '';
+            });
+          });
+        </script>
+         
+    <script>
+      function changeImage(img) {
+        img.src = "19.jpg";
+      }
+  
+      function restoreImage(img) {
+        img.src = "im1.jpg";
+      }
+    </script>
+       <script>
+           const scrollElements = document.querySelectorAll(".scroll-animated");
+   
+           function checkScroll() {
+               scrollElements.forEach((element) => {
+                   const elementTop = element.getBoundingClientRect().top;
+                   if (elementTop < window.innerHeight - 20) {
+                       element.classList.add("animate");
+                   } else {
+                       element.classList.remove("animate");
+                   }
+               });
+           }
+   
+           window.addEventListener("scroll", checkScroll);
+           window.addEventListener("load", checkScroll);
+       </script>
+      
+           <script>
+               const hamburger = document.querySelector(".hamburger");
+               const navMenu = document.querySelector(".nav-menu");
+       
+       
+               hamburger.addEventListener("click", () => {
+                   hamburger.classList.toggle("active");
+                   navMenu.classList.toggle("active");
+               })
+               document.querySelectorAll(".nav-link").forEach(n=> n.
+               addEventListener("click", () => {
+                   hamburger.classList.remove("active");
+                   navMenu.classList.remove("active");
+               }))
+               </script>
+           
 </body>
 </html>

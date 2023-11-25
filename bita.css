@@ -1,0 +1,118 @@
+.main-scroll-div{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.411), rgb(0, 0, 0)), url(assets/boja.jpg); /* Set the background color to black */
+    background-position: center;
+background-size: cover;
+position: relative;
+}
+.scrollable-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 20px; /* Add padding for better visual appearance */
+}
+.scrollable-container::-webkit-scrollbar {
+display: none;
+}
+.contain {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.pro p {
+    color: white;
+    font-size: 50px;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: bold;
+    
+}
+
+.card {
+    flex: 1;
+    background-color:rgba(221, 217, 217, 0.555);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(53, 53, 53, 0.2);
+    margin: 10px;
+    overflow: hidden;
+    width: 310px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: inline-block; /* Display cards in a row */
+    white-space: normal; /* Allow text within cards to wrap */
+    vertical-align: top; /* Align cards at the top */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-width: 300px;
+    height: 210px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+.card-content { 
+    padding: 20px;
+    color: silver;
+}
+
+.card-content p {
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Title styles */
+.card h2 {
+    font-size: 24px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for title */
+    color: white; /* Text color for title */
+    padding: 10px; /* Spacing for title */
+    position: absolute; /* Position the title */
+    top: 0; /* Place title at the top of the card */
+    left: 0; /* Place title at the left of the card */
+    width: 100%; /* Make title full width of the card */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .contain {
+        flex-direction: column; /* Stack cards and title vertically on small screens */
+    }
+
+    .pro {
+        flex-basis: 100%; /* Make the "Projects" title take full width */
+    }
+
+    .card {
+        flex-basis: auto; /* Reset the card flex basis */
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .contain {
+        flex-direction: row; /* Display cards and title horizontally on larger screens */
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .pro {
+        flex-basis: auto; /* Reset the "Projects" title flex basis */
+        margin-right: 20px; /* Add some spacing between the title and cards */
+    }
+
+    .card {
+        flex-basis: calc(25% - 20px); /* Four cards in a row with gap between them */
+        margin: 10px;
+    }
+}
