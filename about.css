@@ -479,7 +479,7 @@ h6 {
 
 
 .contact {
-    margin-top: 6rem;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -515,6 +515,7 @@ h6 {
 
 
 .contact-content{
+    margin-top: 8rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
