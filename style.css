@@ -337,14 +337,7 @@ header.sticky{
     color: var(--bg-color);
     box-shadow: #ff9f0d 0px 1px 25px;
 }
-.sticky-contact {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background: var(--bg-color); /* Adjust the background color as needed */
-    z-index: 1000; /* Set the z-index to ensure it's above other elements */
-    padding: 20px 14%; /* Adjust padding as needed */
- }
+
 .contact-content{
     display: flex;
     align-items: center;
