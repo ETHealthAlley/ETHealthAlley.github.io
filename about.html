@@ -259,9 +259,8 @@ width: 100%; /* Make title full width of the card */
            <div class="social">
             <a href="https://www.facebook.com/profile.php?id=61554697588531"><i class='bx bxl-facebook'></i></a>
             <a href="https://www.linkedin.com/in/et-health-alley-plc-6bb3962a5/"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://twitter.com/PlcEt22495"><i class='bx bxl-twitter'></i></a>
-           
-           </div>
+            <a class="color" href="https://twitter.com/PlcEt22495" target="_blank" ><iconify-icon icon="devicon:twitter"></iconify-icon></a></div>
+        </div>
 
        </div>
 
@@ -284,7 +283,39 @@ width: 100%; /* Make title full width of the card */
 </section>
 
 
-  
+<style>
+    /* Apply your custom styles to the <iconify-icon> element */
+    .color {
+        height: 40px; /* Specify the unit (e.g., px) */
+        width: 40px; /* Specify the unit (e.g., px) */
+        display: inline-block; /* or display: block; depending on your layout */
+        background-color: white; /* Set the background color of the box */
+        padding: 10px; /* Optional: Add padding for spacing around the icon */
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    .color iconify-icon {
+        /* Example styles */
+        color: blue; /* Twitter blue color */
+        font-size: 1em;
+        border-color: white; /* Adjust the font size as needed */
+    }
+    .color:hover {
+            background-color: dodgerblue; /* Change the background color on hover */
+        }
+        @media (max-width: 600px) {
+        .color {
+            height: 30px;
+            width: 30px;
+            padding: 8px;
+        }
+
+        .color iconify-icon {
+            font-size: 1.2em;
+        }
+    }
+</style>
   
       <!--link to custom js-->
       <script src="main.js"></script>
@@ -347,6 +378,8 @@ width: 100%; /* Make title full width of the card */
                    navMenu.classList.remove("active");
                }))
                </script>
+                <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
            
 </body>
 </html>
