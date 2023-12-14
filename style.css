@@ -239,6 +239,86 @@ header.sticky{
 .container-box a:hover{
     color: var(--main-color);
 }
+
+
+
+
+
+
+
+
+.news{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 4rem;
+    color: dodgerblue;
+}
+.news-img img{
+    width:100%;
+    height: auto;
+}
+.news-text h2{
+    font-size: var(--h2-font);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.news-text h3{
+    font-size: var(--h2-font);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(20) forwards;
+   
+}
+.news span{
+  color: white;
+}
+.news-text p{
+    color:var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+}
+.middle-text{
+    text-align: center;
+}
+.middle-text h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+.middle-text h2{
+    font-size: var(--h2-font);
+    color: dodgerblue;
+}
+.middle-text span{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
 .about{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -254,6 +334,27 @@ header.sticky{
     font-size: var(--h2-font);
     line-height: 1.3;
     margin-bottom: 2rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.about-text h3{
+    font-size: var(--h2-font);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(20) forwards;
+   
 }
 .about span{
   color: white;
