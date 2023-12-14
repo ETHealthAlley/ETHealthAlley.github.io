@@ -583,6 +583,12 @@ header.sticky{
 .about-img{
     text-align: center;
 }
+.news{
+    grid-template-columns: 1fr;
+}
+.news-img{
+    text-align: center;
+}
 }
 @media(max-width: 520px){
  .contact-img{
@@ -602,7 +608,12 @@ header.sticky{
  .details{
     gap: 1.5rem;
  }
-
+ .news{
+    grid-template-columns: 1fr;
+}
+.news-img{
+    text-align: center;
+}
 }
 @media(max-width: 475px){
     :root{
@@ -615,4 +626,10 @@ header.sticky{
     height: 110vh;
     gap: 0.1rem;
  }
+ .news{
+    grid-template-columns: 1fr;
+}
+.news-img{
+    text-align: center;
+}
 }
