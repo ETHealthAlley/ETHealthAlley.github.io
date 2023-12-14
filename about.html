@@ -287,12 +287,14 @@ width: 100%; /* Make title full width of the card */
     /* Apply your custom styles to the <iconify-icon> element */
     .color {
         height: 40px; /* Specify the unit (e.g., px) */
-        width: 40px; /* Specify the unit (e.g., px) */
+        width: 50px; /* Specify the unit (e.g., px) */
+        border-radius: 25%;
         display: inline-block; /* or display: block; depending on your layout */
-        background-color: white; /* Set the background color of the box */
+        background-color: #f0f0f0; /* Light gray background color */
         padding: 10px; /* Optional: Add padding for spacing around the icon */
-        border-radius: 50%;
+        border-radius: 10px; /* Rounded corners */
         transition: background-color 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
     }
 
     .color iconify-icon {
@@ -301,13 +303,15 @@ width: 100%; /* Make title full width of the card */
         font-size: 1em;
         border-color: white; /* Adjust the font size as needed */
     }
+
     .color:hover {
-            background-color: dodgerblue; /* Change the background color on hover */
-        }
-        @media (max-width: 600px) {
+        background-color: #2196F3; /* Change the background color on hover to a different shade of blue */
+    }
+
+    @media (max-width: 600px) {
         .color {
             height: 30px;
-            width: 30px;
+            width: 80px;
             padding: 8px;
         }
 
